@@ -4,6 +4,13 @@
   <groupId>sample</groupId>
   <artifactId>scala-module-dependency-sample</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-sql_2.11</artifactId>
+      <version>2.2.0</version>
+    </dependency>
+  </dependencies>
   <!-- Maven profiles allow you to support both Scala 2.10, 2.11 and Scala 2.12 with
     the right dependencies for modules specified for each version separately -->
   <profiles>
@@ -126,7 +133,8 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>XMLHelloWorld</mainClass>
+              <!--<mainClass>XMLHelloWorld</mainClass>-->
+              <mainClass>SimpleApp</mainClass>
             </manifest>
           </archive>
         </configuration>
