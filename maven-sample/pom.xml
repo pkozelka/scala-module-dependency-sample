@@ -135,8 +135,11 @@
             <manifest>
               <!--<mainClass>XMLHelloWorld</mainClass>-->
               <mainClass>SimpleApp</mainClass>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>../lib/</classpathPrefix>
             </manifest>
           </archive>
+          <outputDirectory>${project.build.directory}/dist/bin</outputDirectory>
         </configuration>
       </plugin>
       <plugin>
@@ -147,10 +150,10 @@
           <execution>
             <id>executable-jar</id>
             <goals>
-              <goal>unpack-dependencies</goal>
+              <goal>copy-dependencies</goal>
             </goals>
             <configuration>
-              <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+              <outputDirectory>${project.build.directory}/dist/lib</outputDirectory>
             </configuration>
           </execution>
         </executions>
