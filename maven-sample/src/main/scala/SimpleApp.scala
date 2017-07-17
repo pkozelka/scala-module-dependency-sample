@@ -7,6 +7,7 @@ object SimpleApp {
     val spark = SparkSession
       .builder
       .appName("Simple Application")
+      .config("spark.master", "local") // thanks to https://stackoverflow.com/a/40555616/455449
       .getOrCreate()
     val logData = spark.read.textFile(logFile).cache()
     val numAs = logData.filter(line => line.contains("a")).count()
