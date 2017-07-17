@@ -16,9 +16,6 @@
   <profiles>
     <profile>
       <id>scala-2.12</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
       <properties>
         <scalaVersion>2.12.0</scalaVersion>
         <scalaBinaryVersion>2.12</scalaBinaryVersion>
@@ -48,6 +45,9 @@
     </profile>
     <profile>
       <id>scala-2.11</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
       <properties>
         <scalaVersion>2.11.8</scalaVersion>
         <scalaBinaryVersion>2.11</scalaBinaryVersion>
